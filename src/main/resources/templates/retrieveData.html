@@ -1,0 +1,239 @@
+```html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Details</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <style>
+
+        .student-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        .student-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .student-header h1 {
+            color: #1e293b;
+            font-size: 35px;
+            margin-bottom: 8px;
+        }
+
+        .student-header p {
+            color: #64748b;
+            font-size: 16px;
+        }
+
+        .table-card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #1e293b;
+            color: white;
+
+            padding: 15px;
+            font-size: 15px;
+
+            text-align: center;
+        }
+
+        td {
+            padding: 14px;
+
+            text-align: center;
+
+            border-bottom: 1px solid #e2e8f0;
+
+            color: #334155;
+            font-size: 15px;
+        }
+
+        tr:hover td {
+            background: #f1f5f9;
+        }
+
+        .student-id {
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .student-name {
+            font-weight: bold;
+            color: #1e293b;
+        }
+
+        .student-cgpa {
+            font-weight: bold;
+            color: #16a34a;
+        }
+
+        .home-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .home-btn {
+            display: inline-block;
+
+            padding: 12px 25px;
+
+            background: #1e293b;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        @media (max-width: 700px) {
+
+            .student-container {
+                margin-top: 30px;
+                padding: 0 10px;
+            }
+
+            .student-header h1 {
+                font-size: 28px;
+            }
+
+            .table-card {
+                padding: 12px;
+            }
+
+            th,
+            td {
+                padding: 10px;
+                font-size: 13px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div th:replace="~{navbar :: navbar}"></div>
+
+
+    <div class="student-container">
+
+        <!-- Header -->
+        <div class="student-header">
+
+            <h1>🎓 Student Details</h1>
+
+            <p>All registered students in the system</p>
+
+        </div>
+
+
+        <!-- Table Card -->
+        <div class="table-card">
+
+            <table>
+
+                <tr>
+
+                    <th>🎫 ID</th>
+
+                    <th>👤 Name</th>
+
+                    <th>📊 CGPA</th>
+
+                    <th>📧 College Email</th>
+
+                    <th>📱 Phone</th>
+
+                    <th>🏫 Department</th>
+
+                    <th>📅 Year</th>
+
+                </tr>
+
+
+                <!-- Thymeleaf loop -->
+
+                <tr th:each="s : ${student}">
+
+                    <td class="student-id"
+                        th:text="${s.id}">
+                    </td>
+
+                    <td class="student-name"
+                        th:text="${s.sname}">
+                    </td>
+
+                    <td class="student-cgpa"
+                        th:text="${s.cgpa}">
+                    </td>
+
+                    <td th:text="${s.email}">
+                    </td>
+
+                    <td th:text="${s.phone}">
+                    </td>
+
+                    <td th:text="${s.department}">
+                    </td>
+
+                    <td th:text="${s.year}">
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- Home Button -->
+
+        <div class="home-section">
+
+            <a href="/home" class="home-btn">
+                🏠 Back to Home Page
+            </a>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

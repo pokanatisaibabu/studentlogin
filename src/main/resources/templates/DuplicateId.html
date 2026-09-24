@@ -1,0 +1,39 @@
+```html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Duplicate ID</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <!-- Common Navigation Bar -->
+    <div th:replace="~{navbar :: navbar}"></div>
+
+    <div class="duplicate-container">
+
+        <h1>⚠️ ID Already Exists!</h1>
+
+        <h2>
+            Student ID
+            <span class="id" th:text="${id}"></span>
+            already exists.
+        </h2>
+
+        <p>
+            Please enter a different and valid ID.
+        </p>
+
+        <a href="/home" class="back-button">
+            ← Go Back
+        </a>
+
+    </div>
+
+</body>
+</html>
+```

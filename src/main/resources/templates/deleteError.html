@@ -1,0 +1,39 @@
+```html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Deletion Error</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <!-- Common Navigation Bar -->
+    <div th:replace="~{navbar :: navbar}"></div>
+
+    <div class="duplicate-container">
+
+        <h1>⚠️ ID Doesn't Exist!</h1>
+
+        <h2>
+            Student ID
+            <span class="id" th:text="${id}"></span>
+            doesn't exist.
+        </h2>
+
+        <p>
+            Please enter a valid ID.
+        </p>
+
+        <a href="/home" class="back-button">
+            ← Home Page
+        </a>
+
+    </div>
+
+</body>
+</html>
+```

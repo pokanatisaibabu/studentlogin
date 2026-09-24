@@ -1,0 +1,39 @@
+```html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Retrieve Student</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <div th:replace="~{navbar :: navbar}"></div>
+
+    <div class="get-box">
+
+        <h2>🔍 Retrieve Student</h2>
+
+        <form action="/getStudent" method="post">
+
+            <label>Enter Student ID</label>
+
+            <input type="number"
+                   name="id"
+                   min="1"
+                   placeholder="Enter ID"
+                   required>
+
+            <input type="submit"
+                   value="Submit">
+
+        </form>
+
+    </div>
+
+</body>
+</html>
+```

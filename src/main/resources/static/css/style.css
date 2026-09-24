@@ -1,0 +1,332 @@
+.navbar {
+    background-color: #1f2937;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+css
+/* Duplicate ID Page */
+
+.duplicate-container {
+    width: 500px;
+    margin: 100px auto;
+    padding: 45px;
+    text-align: center;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.duplicate-container h1 {
+    color: #dc2626;
+    margin-bottom: 20px;
+}
+
+.duplicate-container h2 {
+    color: #1e293b;
+    font-size: 22px;
+}
+
+.duplicate-container .id {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.duplicate-container p {
+    color: #64748b;
+    font-size: 17px;
+    margin: 25px 0;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1e293b;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+/* Delete Student Page */
+
+css
+.delete-box {
+    width: 350px;
+    height: 250px;
+
+    background: white;
+    border-radius: 30px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 35px;
+}
+
+.delete-box h2 {
+    margin-bottom: 30px;
+    color: #1e293b;
+}
+
+.delete-box input {
+    width: 250px;
+    padding: 12px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.delete-box button {
+    width: 250px;
+    padding: 12px;
+
+    margin-top: 35px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #dc2626;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.delete-box button:hover {
+    background: #b91c1c;
+}
+
+css
+.update-box {
+    width: 400px;
+    padding: 35px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+.update-box h2 {
+    color: #1e293b;
+    margin-bottom: 25px;
+}
+
+.update-box input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 15px;
+    margin-bottom: 15px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+
+    font-size: 15px;
+    background: #f8fafc;
+}
+
+.update-box input:focus {
+    outline: none;
+    border-color: #38bdf8;
+    background: white;
+}
+
+.update-box button {
+    width: 100%;
+    padding: 12px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.update-box button:hover {
+    background: #1d4ed8;
+}
+
+css
+.get-box {
+    width: 350px;
+    padding: 40px;
+
+    background: white;
+    border-radius: 25px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+.get-box h2 {
+    color: #1e293b;
+    margin-bottom: 30px;
+}
+
+.get-box label {
+    display: block;
+    text-align: left;
+
+    margin-bottom: 8px;
+
+    color: #1e293b;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.get-box input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px;
+    margin-bottom: 20px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+.get-box input[type="number"]:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+.get-box input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.get-box input[type="submit"]:hover {
+    background: #1d4ed8;
+}
+
+.add-form {
+    background: white;
+    margin-top: 35px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.add-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #667eea;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #5568d9;
+}

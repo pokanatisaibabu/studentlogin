@@ -1,0 +1,146 @@
+```html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Update Student</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <div th:replace="~{navbar :: navbar}"></div>
+
+
+    <!-- Update Student Form -->
+
+    <div class="container">
+
+        <div class="add-form">
+
+            <h2>✏️ Update Student</h2>
+
+            <form action="/updateStudent" method="post">
+
+
+                <div class="form-group">
+
+                    <label>Student Name</label>
+
+                    <input type="text"
+                           name="sname"
+                           placeholder="Enter student name"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Roll Number</label>
+
+                    <input type="number"
+                           name="id"
+                           min="1"
+                           placeholder="Enter roll number"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>CGPA</label>
+
+                    <input type="number"
+                           name="cgpa"
+                           min="0"
+                           max="10"
+                           step="0.01"
+                           placeholder="Enter CGPA (0 - 10)"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>College Email</label>
+
+                    <input type="email"
+                           name="email"
+                           placeholder="example@college.com"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Phone</label>
+
+                    <input type="tel"
+                           name="phone"
+                           pattern="[6-9][0-9]{9}"
+                           maxlength="10"
+                           minlength="10"
+                           placeholder="Enter 10-digit phone number"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Department</label>
+
+                    <input type="text"
+                           name="department"
+                           placeholder="Enter department"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Year</label>
+
+                    <input type="number"
+                           name="year"
+                           min="1"
+                           max="4"
+                           placeholder="Enter year (1 - 4)"
+                           required>
+
+                </div>
+
+
+                <button type="submit"
+                        class="submit-btn">
+
+                    Update Student
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+```

@@ -1,0 +1,40 @@
+```html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Student</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div th:replace="~{navbar :: navbar}"></div>
+
+    <!-- Center Box -->
+    <div class="delete-box">
+
+        <h2>Delete Student</h2>
+
+        <form action="/deleteStudent" method="post">
+
+            <input type="number"
+                   name="id"
+                   min="1"
+                   required
+                   placeholder="Enter Student ID"><br>
+
+            <button type="submit">
+                Delete
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
+```
